@@ -17,6 +17,12 @@ Dark green: #28b485
     padding: 15px;
 }
 
+html
+{
+    font-size: 10px; 
+    /* Thanks to this we just have to divide by 10 and that's it haha */
+}
+
 .header
 {
     height: 95vh;
@@ -31,13 +37,13 @@ Dark green: #28b485
 .logo-box
 {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 0.5rem;
+    left: 0.5rem;
 }
 
 .logo
 {
-    height: 70px;
+    height: 7rem;
 }
 .text-box{
     position: absolute;
@@ -50,7 +56,7 @@ Dark green: #28b485
 {
     color: rgb(44, 219, 82);
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
     /* text-transform: uppercase; */
 }
 
@@ -58,10 +64,10 @@ Dark green: #28b485
 {
     color: rgb(44, 219, 82);
     display: block;
-    font-size: 80px;
-    letter-spacing: 100px;
+    font-size: 8rem;
+    letter-spacing: 10rem;
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 2rem;
     /* left: 60%; */
     animation-name: MoveInLeft;
     animation-duration: 2s;
@@ -71,10 +77,10 @@ Dark green: #28b485
 {
     color: rgb(44, 219, 82);
     display: block;
-    font-size: 30px;
-    letter-spacing: 12.1px;
+    font-size: 3rem;
+    letter-spacing: 1.21rem;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 2rem;
     animation-name: MoveInRight;
     animation-duration: 2s;
 }
@@ -84,12 +90,12 @@ Dark green: #28b485
         0%
         {
             opacity: 0;
-            transform: translateX(-100px);
+            transform: translateX(-10rem);
         }
 
         80%
         {
-            transform: translateX(20px);
+            transform: translateX(2rem);
         }
         100%
         {
@@ -103,12 +109,12 @@ Dark green: #28b485
         0%
         {
             opacity: 0;
-            transform: translateX(100px);
+            transform: translateX(10rem);
         }
 
         80%
         {
-            transform: translateX(-20px);
+            transform: translateX(-2rem);
         }
         100%
         {
@@ -122,24 +128,24 @@ Dark green: #28b485
 {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 25px 40px;
+    padding: 2.5rem 4rem;
     position: absolute;
-    left: 24%;
+    left: 30%;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: relative;
 }
 
 .btn:hover
 {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active
 {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); 
 }
 
 .btn-white 
@@ -154,7 +160,7 @@ Dark green: #28b485
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -178,7 +184,7 @@ Dark green: #28b485
         0%
         {
             opacity: 0;
-            transform: translateY(100px);
+            transform: translateY(10rem);
         }
 
         80%
