@@ -1,0 +1,26 @@
+{
+  "name": "icook",
+  "version": "1.0.0",
+  "description": "Foodsite",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mynameisone/iCook.git"
+  },
+  "author": "Azimjon Kamolov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mynameisone/iCook/issues"
+  },
+  "homepage": "https://github.com/mynameisone/iCook#readme",
+  "dependencies": {
+    "jquery": "^3.4.0",
+    "npm-watch": "^0.6.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

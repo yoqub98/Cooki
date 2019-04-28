@@ -6,252 +6,160 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-
 *
-{
-    font-family: "Lato" sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.7px;
-    color: #777;
-    padding: 15px;
-}
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
 
-html
-{
-    font-size: 10px; 
-    /* Thanks to this we just have to divide by 10 and that's it haha */
-}
+body {
+  font-family: "Lato" sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7px;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box; }
 
-.header
-{
-    height: 95vh;
-    background-image: linear-gradient(to right, rgba(139, 112, 213, 0.795), rgba(40, 89, 180, 0.8)) , url(../img/mainpage.jpg);
-    background-size: cover;
-    background-position: top;
-    position: relative;
+html {
+  font-size: 62.5%;
+  /* Thanks to this we just have to divide by 10 and that's it haha */ }
 
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-} 
-
-.logo-box
-{
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, #8b70d5cb, #285964cc), url(../img/mainpage.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header_logo-box {
     position: absolute;
     top: 0.5rem;
-    left: 0.5rem;
-}
-
-.logo
-{
-    height: 7rem;
-}
-.text-box{
+    left: 0.5rem; }
+  .header_logo {
+    height: 7rem; }
+  .header_text-box {
     position: absolute;
     top: 50%;
-    left: 50% ;
-    transform: translate(-50%, -50%);
-}
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
-.heading-primary
-{
-    color: rgb(44, 219, 82);
-    backface-visibility: hidden;
-    margin-bottom: 6rem;
-    /* text-transform: uppercase; */
-}
-
-.heading-primary-main
-{
-    color: rgb(44, 219, 82);
+.heading-primary {
+  color: #2cdb52;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  /* text-transform: uppercase; */ }
+  .heading-primary--main {
+    color: #2cdb52;
     display: block;
     font-size: 8rem;
     letter-spacing: 10rem;
     font-weight: 400;
-    margin-top: 2rem;
+    margin-top: 5rem;
     /* left: 60%; */
     animation-name: MoveInLeft;
-    animation-duration: 2s;
-}
-
-.heading-primary-sub
-{
-    color: rgb(44, 219, 82);
+    animation-duration: 2s; }
+  .heading-primary--sub {
+    color: #2cdb52;
     display: block;
     font-size: 3rem;
     letter-spacing: 1.21rem;
     font-weight: 700;
-    margin-top: 2rem;
+    margin-top: 5rem;
     animation-name: MoveInRight;
-    animation-duration: 2s;
-}
+    animation-duration: 2s; }
 
-@keyframes MoveInLeft
-{
-        0%
-        {
-            opacity: 0;
-            transform: translateX(-10rem);
-        }
-
-        80%
-        {
-            transform: translateX(2rem);
-        }
-        100%
-        {
-            opacity: 1;
-            transform: translate(0)
-        }
-}
-
-@keyframes MoveInRight
-{
-        0%
-        {
-            opacity: 0;
-            transform: translateX(10rem);
-        }
-
-        80%
-        {
-            transform: translateX(-2rem);
-        }
-        100%
-        {
-            opacity: 1;
-            transform: translate(0)
-        }
-}
-
-.btn:link,
-.btn:visited
-{
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 2.5rem 4rem;
-    position: absolute;
-    left: 30%;
-    display: inline-block;
-    border-radius: 10rem;
-    position: relative;
-}
-
-.btn:hover
-{
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.btn:active
-{
-    transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); 
-}
-
-.btn-white 
-{
-    color: #777;
-    background-color: #fff;
-}
-
-.btn::after
-{
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn-white::after
-{
-    background-color: #fff;
-}
-
-.btn:hover::after
-{
-    transform: scale(2);
+@keyframes MoveUp {
+  0% {
     opacity: 0;
-}
-
-@keyframes MoveUp
-{
-        0%
-        {
-            opacity: 0;
-            transform: translateY(10rem);
-        }
-
-        80%
-        {
-            opacity: 0.7;
-        }
-
-        100%
-        {
-            opacity: 1;
-            transform: translate(0)
-        }
-}
-
-.btn-up
-{
-    animation: MoveUp;
-    animation-duration: 2s;
-    animation-delay: 2s;
-    animation-fill-mode: backwards;
-}
-
-
-
-
+    transform: translateY(10rem); }
+  80% {
+    opacity: 0.7; }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+@keyframes MoveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+@keyframes MoveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 2.5rem 4rem;
+  position: absolute;
+  left: 30%;
+  display: inline-block;
+  border-radius: 10rem;
+  position: relative; }
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scale(2);
+    opacity: 0; }
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); }
+.btn--white {
+  color: #777;
+  background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+.btn-up {
+  animation: MoveUp;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards; }
 
 /* Starting point for iCook apps*/
+.text-box-app {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  animation: MoveUp;
+  animation-delay: 0; }
 
-.text-box-app{
-    position: absolute;
-    top: 50%;
-    left: 30% ;
-    transform: translate(-50%, -50%);
-}
+.appheader {
+  font-size: 4rem;
+  position: absolute;
+  right: 0%;
+  letter-spacing: normal;
+  margin-top: 70rem; }
 
+.for-app1 {
+  margin-right: 4rem 7rem; }
 
-.appheader
-{
-    font-size: 4rem;
-    position: absolute;
-    right: 0%;
-    letter-spacing: normal;
-}
-
-.for-app1
-{
-    margin-right: 4rem 7rem;
-}
-
-.for-app2
-{
-    margin-left: 10rem;
-}
+.for-app2 {
+  margin-left: 10rem; }
 
 /* Ending point for iCook apps */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*  */
+
+/*# sourceMappingURL=style.css.map */

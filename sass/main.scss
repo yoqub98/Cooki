@@ -1,0 +1,288 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+$color-primary: #7ed56f;
+$color-primary-light: #8b70d5cb;
+$color-primary-dark: #285964cc;
+
+$color-grey: #777;
+$color-white:#fff;
+$color-black: #000;
+
+*
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body
+{
+    font-family: "Lato" sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7px;
+    color: #777;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 62.5%; 
+    /* Thanks to this we just have to divide by 10 and that's it haha */
+}
+
+.header
+{
+    height: 95vh;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark) , url(../img/mainpage.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &_logo-box
+    {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+
+    &_logo
+    {
+        height: 7rem;
+    }
+
+    &_text-box
+    {
+        position: absolute;
+        top: 50%;
+        left: 50% ;
+        transform: translate(-50%, -50%);
+    }
+} 
+
+.heading-primary
+{
+    color: rgb(44, 219, 82);
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    /* text-transform: uppercase; */
+
+    &--main
+    {
+        color: rgb(44, 219, 82);
+        display: block;
+        font-size: 8rem;
+        letter-spacing: 10rem;
+        font-weight: 400;
+        margin-top: 5rem;
+        /* left: 60%; */
+        animation-name: MoveInLeft;
+        animation-duration: 2s;
+    }
+
+    &--sub
+    {
+        color: rgb(44, 219, 82);
+        display: block;
+        font-size: 3rem;
+        letter-spacing: 1.21rem;
+        font-weight: 700;
+        margin-top: 5rem;
+        animation-name: MoveInRight;
+        animation-duration: 2s;
+    }
+}
+
+
+@keyframes MoveUp
+{
+        0%
+        {
+            opacity: 0;
+            transform: translateY(10rem);
+        }
+
+        80%
+        {
+            opacity: 0.7;
+        }
+
+        100%
+        {
+            opacity: 1;
+            transform: translate(0)
+        }
+}
+
+@keyframes MoveInLeft
+{
+        0%
+        {
+            opacity: 0;
+            transform: translateX(-10rem);
+        }
+
+        80%
+        {
+            transform: translateX(2rem);
+        }
+        100%
+        {
+            opacity: 1;
+            transform: translate(0)
+        }
+}
+
+@keyframes MoveInRight
+{
+        0%
+        {
+            opacity: 0;
+            transform: translateX(10rem);
+        }
+
+        80%
+        {
+            transform: translateX(-2rem);
+        }
+        100%
+        {
+            opacity: 1;
+            transform: translate(0)
+        }
+}
+
+.btn
+{
+    
+&:link,
+&:visited
+{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2.5rem 4rem;
+    position: absolute;
+    left: 30%;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+}
+
+&:hover
+{
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after
+    {
+        transform: scale(2);
+        opacity: 0;
+    }
+
+}
+
+&:active
+{
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2); 
+}
+
+&--white 
+{
+    color: $color-grey;
+    background-color: $color-white;
+
+    &::after
+    {
+        background-color: $color-white;
+    }
+}
+
+&::after
+{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+&-up
+{
+    animation: MoveUp;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+}
+
+
+
+
+
+
+/* Starting point for iCook apps*/
+
+.text-box-app{
+    position: absolute;
+    top: 50%;
+    left: 40% ;
+    transform: translate(-50%, -50%);
+    animation: MoveUp;
+    animation-delay: 0;
+}
+
+
+.appheader
+{
+    font-size: 4rem;
+    position: absolute;
+    right: 0%;
+    letter-spacing: normal;
+    margin-top: 70rem;
+}
+
+.for-app1
+{
+    margin-right: 4rem 7rem;
+}
+
+.for-app2
+{
+    margin-left: 10rem;
+}
+
+/* Ending point for iCook apps */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
