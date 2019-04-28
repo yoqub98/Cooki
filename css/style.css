@@ -211,7 +211,35 @@ html
 
 
 
+/* Starting point for iCook apps*/
 
+.text-box-app{
+    position: absolute;
+    top: 50%;
+    left: 30% ;
+    transform: translate(-50%, -50%);
+}
+
+
+.appheader
+{
+    font-size: 4rem;
+    position: absolute;
+    right: 0%;
+    letter-spacing: normal;
+}
+
+.for-app1
+{
+    margin-right: 4rem 7rem;
+}
+
+.for-app2
+{
+    margin-left: 10rem;
+}
+
+/* Ending point for iCook apps */
 
 
 
