@@ -1,0 +1,43 @@
+
+.heading-primary
+{
+    color: rgb(44, 219, 82);
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    /* text-transform: uppercase; */
+
+    &--main
+    {
+        color: rgb(44, 219, 82);
+        display: block;
+        font-size: 8rem;
+        letter-spacing: 10rem;
+        font-weight: 400;
+        margin-top: 5rem;
+        /* left: 60%; */
+        animation-name: MoveInLeft;
+        animation-duration: 2s;
+    }
+
+    &--sub
+    {
+        color: rgb(44, 219, 82);
+        display: block;
+        font-size: 3rem;
+        letter-spacing: 1.21rem;
+        font-weight: 700;
+        margin-top: 5rem;
+        animation-name: MoveInRight;
+        animation-duration: 2s;
+    }
+}
+
+body
+{
+    font-family: "Lato" sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7px;
+    color: #777;
+    padding: 3rem;
+}

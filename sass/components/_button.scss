@@ -1,0 +1,115 @@
+
+.btn
+{
+    
+&:link,
+&:visited
+{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2.5rem 4rem;
+    position: absolute;
+    left: 30%;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+}
+
+&:hover
+{
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after
+    {
+        transform: scale(2);
+        opacity: 0;
+    }
+
+}
+
+&:active
+{
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 2rem rgba($color-black, 0.2); 
+}
+
+&--white 
+{
+    color: $color-grey;
+    background-color: $color-white;
+
+    &::after
+    {
+        background-color: $color-white;
+    }
+}
+
+&::after
+{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+&-up
+{
+    animation: MoveUp;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+}
+
+
+
+
+
+
+/* Starting point for iCook apps*/
+
+.text-box-app{
+    position: absolute;
+    top: 50%;
+    left: 40% ;
+    transform: translate(-50%, -50%);
+    animation: MoveUp;
+    animation-delay: 0;
+}
+
+
+.appheader
+{
+    font-size: 4rem;
+    position: absolute;
+    right: 0%;
+    letter-spacing: normal;
+    margin-top: 70rem;
+}
+
+.for-app1
+{
+    margin-right: 4rem 7rem;
+}
+
+.for-app2
+{
+    margin-left: 10rem;
+}
+
+
+
+
+
+/* Ending point for iCook apps */
+
+
+
