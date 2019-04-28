@@ -173,7 +173,33 @@ Dark green: #28b485
     opacity: 0;
 }
 
+@keyframes MoveUp
+{
+        0%
+        {
+            opacity: 0;
+            transform: translateY(100px);
+        }
 
+        80%
+        {
+            opacity: 0.7;
+        }
+
+        100%
+        {
+            opacity: 1;
+            transform: translate(0)
+        }
+}
+
+.btn-up
+{
+    animation: MoveUp;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
 
 
 
