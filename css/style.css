@@ -927,4 +927,19 @@ body {
       .book__form {
         width: 100%; } }
 
+
+.btnloc1
+{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+}
+
+.btnloc2
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 /*# sourceMappingURL=style.css.map */
