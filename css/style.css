@@ -261,11 +261,11 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/palov.jpg); }
     .card__picture--2 {
       background-image: linear-gradient(to right bottom, #6f7ed5, #0f0542), url(../img/nat-6.jpg); }
     .card__picture--3 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-1.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
