@@ -1,3 +1,20 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -7,6 +24,7 @@
   100% {
     opacity: 1;
     transform: translate(0); } }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -16,6 +34,7 @@
   100% {
     opacity: 1;
     transform: translate(0); } }
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -23,6 +42,7 @@
   100% {
     opacity: 1;
     transform: translate(0); } }
+
 *,
 *::after,
 *::before {
@@ -62,6 +82,7 @@ body {
 
 .heading-primary {
   color: #fff;
+  text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
   .heading-primary--main {
@@ -73,9 +94,9 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out;
     /*
-    animation-delay: 3s;
-    animation-iteration-count: 3;
-    */ }
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */ }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: 1rem;
@@ -95,7 +116,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #6f7ed5, #0f0542);
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: .2rem;
@@ -169,26 +190,31 @@ body {
   font-size: 1.6rem;
   border: none;
   cursor: pointer; }
+
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
+
 .btn:active, .btn:focus {
   outline: none;
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
 .btn--white {
   background-color: #fff;
   color: #777; }
   .btn--white::after {
     background-color: #fff; }
+
 .btn--green {
   background-color: #55c57a;
   color: #fff; }
   .btn--green::after {
     background-color: #55c57a; }
+
 .btn::after {
   content: "";
   display: inline-block;
@@ -200,6 +226,7 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
+
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
@@ -212,11 +239,13 @@ body {
   border-bottom: 1px solid #55c57a;
   padding: 3px;
   transition: all .2s; }
+
 .btn-text:hover {
   background-color: #55c57a;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   transform: translateY(-2px); }
+
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
@@ -245,7 +274,7 @@ body {
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-2 {
-        background-image: linear-gradient(to right bottom, #6f7ed5, #0f0542); }
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
@@ -263,7 +292,7 @@ body {
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #6f7ed5, #0f0542), url(../img/nat-6.jpg); }
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
     .card__picture--3 {
       background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
   .card__heading {
@@ -283,7 +312,7 @@ body {
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
     .card__heading-span--2 {
-      background-image: linear-gradient(to right bottom, rgba(111, 126, 213, 0.85), rgba(15, 5, 66, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
     .card__heading-span--3 {
       background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .card__details {
@@ -406,7 +435,7 @@ body {
     font-size: 6rem;
     margin-bottom: .5rem;
     display: inline-block;
-    background-image: linear-gradient(to right, #6f7ed5, #0f0542);
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
     -webkit-background-clip: text;
     color: transparent; }
     @media only screen and (max-width: 56.25em) {
@@ -417,13 +446,14 @@ body {
 
 .form__group:not(:last-child) {
   margin-bottom: 2rem; }
+
 .form__input {
   font-size: 1.5rem;
   font-family: inherit;
   color: inherit;
   padding: 1.5rem 2rem;
   border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rbga(#fff, 0.5);
   border: none;
   border-bottom: 3px solid transparent;
   width: 90%;
@@ -440,6 +470,7 @@ body {
     border-bottom: 3px solid #ff7730; }
   .form__input::-webkit-input-placeholder {
     color: #999; }
+
 .form__label {
   font-size: 1.2rem;
   font-weight: 700;
@@ -447,10 +478,12 @@ body {
   margin-top: .7rem;
   display: block;
   transition: all .3s; }
+
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
+
 .form__radio-group {
   width: 49%;
   display: inline-block; }
@@ -458,13 +491,16 @@ body {
     .form__radio-group {
       width: 100%;
       margin-bottom: 2rem; } }
+
 .form__radio-input {
   display: none; }
+
 .form__radio-label {
   font-size: 1.6rem;
   cursor: pointer;
   position: relative;
   padding-left: 4.5rem; }
+
 .form__radio-button {
   height: 3rem;
   width: 3rem;
@@ -487,6 +523,7 @@ body {
     background-color: #55c57a;
     opacity: 0;
     transition: opacity .2s; }
+
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
 
@@ -722,7 +759,7 @@ body {
 
 .header {
   height: 85vh;
-  background-image: linear-gradient(to right bottom, rgba(111, 126, 213, 0.8), rgba(15, 5, 66, 0.8)), url(../img/hero-small.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   position: relative; }
@@ -733,7 +770,7 @@ body {
       height: 95vh; } }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(111, 126, 213, 0.8), rgba(15, 5, 66, 0.8)), url(../img/hero.jpg); } }
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -743,7 +780,7 @@ body {
     top: 4rem;
     left: 4rem; }
   .header__logo {
-    height: 6rem; }
+    height: 3.5rem; }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -753,6 +790,7 @@ body {
 
 .navigation__checkbox {
   display: none; }
+
 .navigation__button {
   background-color: #fff;
   height: 7rem;
@@ -773,6 +811,7 @@ body {
     .navigation__button {
       top: 3rem;
       right: 3rem; } }
+
 .navigation__background {
   height: 6rem;
   width: 6rem;
@@ -780,7 +819,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#6f7ed5, #0f0542);
+  background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
   @media only screen and (max-width: 56.25em) {
@@ -791,6 +830,7 @@ body {
     .navigation__background {
       top: 3.5rem;
       right: 3.5rem; } }
+
 .navigation__nav {
   height: 100vh;
   position: fixed;
@@ -800,6 +840,7 @@ body {
   opacity: 0;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
 .navigation__list {
   position: absolute;
   top: 50%;
@@ -808,8 +849,10 @@ body {
   list-style: none;
   text-align: center;
   width: 100%; }
+
 .navigation__item {
   margin: 1rem; }
+
 .navigation__link:link, .navigation__link:visited {
   display: inline-block;
   font-size: 3rem;
@@ -824,15 +867,19 @@ body {
   .navigation__link:link span, .navigation__link:visited span {
     margin-right: 1.5rem;
     display: inline-block; }
+
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;
   color: #55c57a;
   transform: translateX(1rem); }
+
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(80); }
+
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%; }
+
 .navigation__icon {
   position: relative;
   margin-top: 3.5rem; }
@@ -850,15 +897,20 @@ body {
     top: -.8rem; }
   .navigation__icon::after {
     top: .8rem; }
+
 .navigation__button:hover .navigation__icon::before {
   top: -1rem; }
+
 .navigation__button:hover .navigation__icon::after {
   top: 1rem; }
+
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
   background-color: transparent; }
+
 .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
   top: 0;
   transform: rotate(135deg); }
+
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg); }
@@ -873,7 +925,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(111, 126, 213, 0.8), rgba(15, 5, 66, 0.8)), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -10rem; }
@@ -900,7 +952,7 @@ body {
 
 .section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #6f7ed5, #0f0542); }
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
   @media only screen and (max-width: 56.25em) {
     .section-book {
       padding: 10rem 0; } }
@@ -926,5 +978,3 @@ body {
     @media only screen and (max-width: 56.25em) {
       .book__form {
         width: 100%; } }
-
-/*# sourceMappingURL=style.css.map */
